@@ -1,8 +1,10 @@
 import sql from 'mssql';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const dbSettings = {
-  user: "proyectoAPI",
-  password: "ProyectoApi.",
+  user: process.env.DB_USER,
+  password: process.env.MYSQL_PASSWORD,
   server: "localhost",
   database: "ProyectoAPI",
   options: {
